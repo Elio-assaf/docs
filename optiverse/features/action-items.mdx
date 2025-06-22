@@ -1,0 +1,658 @@
+---
+title: 'Action Items & Task Management'
+description: 'Automatically extract and manage action items from your meetings'
+icon: 'check-square'
+---
+
+Never lose track of commitments again. Optiverse automatically identifies, extracts, and manages action items from your meetings, creating a seamless workflow from discussion to completion.
+
+## What are Action Items?
+
+Action items are specific, actionable tasks that emerge from meeting discussions. Optiverse's AI identifies these commitments automatically and provides powerful tools to manage them throughout their lifecycle.
+
+<CardGroup cols={2}>
+  <Card title="Automatic Detection" icon="robot">
+    **AI-Powered Identification**
+    - Recognizes task-oriented language
+    - Identifies assignments and deadlines
+    - Captures implicit commitments
+    - Suggests missing details
+  </Card>
+  <Card title="Lifecycle Management" icon="refresh">
+    **End-to-End Tracking**
+    - Creation to completion tracking
+    - Status updates and progress monitoring
+    - Deadline management and reminders
+    - Integration with project tools
+  </Card>
+</CardGroup>
+
+## How Action Items are Created
+
+### Automatic Creation During Meetings
+
+<Tabs>
+  <Tab title="AI Recognition Patterns">
+    **Language Patterns That Trigger Action Items**
+    
+    **Direct Assignments:**
+    ```
+    ✅ "Sarah will update the budget by Friday"
+    ✅ "John is responsible for the client presentation"
+    ✅ "Mike needs to review the contract terms"
+    ✅ "Lisa will coordinate with the marketing team"
+    ```
+    
+    **Commitments and Promises:**
+    ```
+    ✅ "I'll follow up with the vendor next week"
+    ✅ "We should schedule a design review"
+    ✅ "Let me get back to you with those numbers"
+    ✅ "I can prepare that report for tomorrow"
+    ```
+    
+    **Decisions Requiring Action:**
+    ```
+    ✅ "We decided to implement the new process"
+    ✅ "The team agreed to increase the budget"
+    ✅ "We need to hire two more developers"
+    ✅ "Let's move forward with option B"
+    ```
+  </Tab>
+  
+  <Tab title="Context Understanding">
+    **AI Context Analysis**
+    
+    **Participant Role Recognition:**
+    - Identifies who can realistically complete tasks
+    - Considers expertise and responsibilities
+    - Recognizes authority levels for assignments
+    - Understands team dynamics and workload
+    
+    **Timeline Inference:**
+    - Extracts explicit deadlines
+    - Infers urgency from context
+    - Considers project timelines
+    - Accounts for dependencies
+    
+    **Priority Assessment:**
+    - Analyzes discussion emphasis
+    - Considers strategic importance
+    - Evaluates time sensitivity
+    - Factors in stakeholder involvement
+  </Tab>
+  
+  <Tab title="Quality Assurance">
+    **Ensuring Action Item Quality**
+    
+    **Completeness Checks:**
+    - Verifies task clarity
+    - Confirms assignee identification
+    - Validates deadline presence
+    - Ensures actionability
+    
+    **Duplicate Prevention:**
+    - Identifies similar existing tasks
+    - Prevents redundant assignments
+    - Consolidates related action items
+    - Maintains task uniqueness
+  </Tab>
+</Tabs>
+
+### Manual Action Item Creation
+
+<Steps>
+  <Step title="During Meetings">
+    **Real-time Addition**
+    - Use the action item panel during meetings
+    - Click "Add Action Item" button
+    - Voice command: "Create action item for [person]"
+    - Quick keyboard shortcut: Ctrl+A
+  </Step>
+  
+  <Step title="Post-Meeting Review">
+    **After-Meeting Creation**
+    - Review meeting summary for missed items
+    - Add items from transcript highlights
+    - Convert notes into actionable tasks
+    - Import from external meeting notes
+  </Step>
+  
+  <Step title="Batch Creation">
+    **Multiple Item Addition**
+    - Use action item templates
+    - Import from spreadsheets
+    - Bulk create from meeting notes
+    - Copy action items from similar meetings
+  </Step>
+</Steps>
+
+## Action Item Structure
+
+### Core Components
+
+<Accordion>
+  <AccordionItem title="Essential Information">
+    **Required Fields:**
+    - **Title**: Clear, actionable description
+    - **Assignee**: Person responsible for completion
+    - **Status**: Current state of the task
+    - **Source**: Meeting where item was created
+    
+    **Best Practice Examples:**
+    ```
+    ❌ Poor: "Follow up"
+    ✅ Good: "Follow up with client about contract terms by Friday"
+    
+    ❌ Poor: "Fix the bug"
+    ✅ Good: "Resolve login authentication bug in mobile app"
+    
+    ❌ Poor: "Marketing stuff"
+    ✅ Good: "Create Q4 marketing campaign proposal with budget breakdown"
+    ```
+  </AccordionItem>
+  
+  <AccordionItem title="Optional Details">
+    **Enhancement Fields:**
+    - **Due Date**: Deadline for completion
+    - **Priority**: Urgency level (High/Medium/Low)
+    - **Description**: Additional context and details
+    - **Dependencies**: Related tasks or blockers
+    - **Tags**: Categories and labels
+    - **Attachments**: Relevant files or links
+    
+    **Priority Guidelines:**
+    ```
+    🔴 High Priority:
+    - Blocking other team members
+    - Client-facing deadlines
+    - Critical business decisions
+    - Security or compliance issues
+    
+    🟡 Medium Priority:
+    - Important but not urgent
+    - Internal process improvements
+    - Planning and preparation tasks
+    - Regular business activities
+    
+    🟢 Low Priority:
+    - Nice-to-have improvements
+    - Future considerations
+    - Research and exploration
+    - Non-time-sensitive tasks
+    ```
+  </AccordionItem>
+</Accordion>
+
+### Status Workflow
+
+<CardGroup cols={5}>
+  <Card title="New" icon="plus">
+    **Just Created**
+    - Recently assigned
+    - Not yet acknowledged
+    - Awaiting acceptance
+    - Initial state
+  </Card>
+  <Card title="In Progress" icon="spinner">
+    **Being Worked On**
+    - Actively being worked on
+    - Resources allocated
+    - Progress being made
+    - Regular updates expected
+  </Card>
+  <Card title="Blocked" icon="stop">
+    **Cannot Proceed**
+    - Waiting for dependencies
+    - Resource constraints
+    - External blockers
+    - Needs intervention
+  </Card>
+  <Card title="Review" icon="eye">
+    **Pending Review**
+    - Work completed
+    - Awaiting approval
+    - Quality check needed
+    - Stakeholder review
+  </Card>
+  <Card title="Done" icon="check">
+    **Completed**
+    - Successfully finished
+    - Objectives met
+    - Stakeholders satisfied
+    - Archived status
+  </Card>
+</CardGroup>
+
+## Task Management Features
+
+### Action Item Dashboard
+
+<img src="/images/features/action-items-dashboard.png" alt="Action Items Dashboard" />
+
+<Tabs>
+  <Tab title="My Tasks">
+    **Personal Task Management**
+    
+    **Views Available:**
+    - All assigned tasks
+    - Tasks due today/this week
+    - Overdue items requiring attention
+    - Recently completed tasks
+    - Tasks waiting for my input
+    
+    **Quick Actions:**
+    - Mark complete
+    - Update status
+    - Add progress notes
+    - Request deadline extension
+    - Reassign to someone else
+  </Tab>
+  
+  <Tab title="Team Tasks">
+    **Team Coordination**
+    
+    **Team Overview:**
+    - All team action items
+    - Workload distribution
+    - Upcoming deadlines
+    - Blocked items needing help
+    - Completed tasks this week
+    
+    **Management Actions:**
+    - Reassign tasks
+    - Adjust priorities
+    - Set dependencies
+    - Bulk status updates
+    - Export team reports
+  </Tab>
+  
+  <Tab title="Project Tasks">
+    **Project-Focused View**
+    
+    **Project Organization:**
+    - Tasks grouped by project
+    - Cross-project dependencies
+    - Resource allocation view
+    - Timeline and milestones
+    - Progress tracking
+    
+    **Project Management:**
+    - Create task templates
+    - Set up recurring tasks
+    - Manage project timelines
+    - Track deliverables
+    - Generate project reports
+  </Tab>
+</Tabs>
+
+### Task Tracking and Updates
+
+<Steps>
+  <Step title="Progress Updates">
+    **Status Communication**
+    - Regular progress check-ins
+    - Percentage completion tracking
+    - Milestone achievement updates
+    - Blocker identification and resolution
+    - Time tracking and estimates
+  </Step>
+  
+  <Step title="Collaboration">
+    **Team Coordination**
+    - Comment on tasks for clarification
+    - @mention team members for input
+    - Share files and resources
+    - Request help or guidance
+    - Coordinate dependent tasks
+  </Step>
+  
+  <Step title="Completion">
+    **Task Closure**
+    - Mark tasks as complete
+    - Add completion notes
+    - Attach deliverables
+    - Notify stakeholders
+    - Archive completed items
+  </Step>
+</Steps>
+
+## Integration with External Tools
+
+### Project Management Platforms
+
+<CardGroup cols={4}>
+  <Card title="Asana" icon="asana">
+    **Task Synchronization**
+    - Auto-create Asana tasks
+    - Sync status updates
+    - Link to projects
+    - Team coordination
+  </Card>
+  <Card title="Jira" icon="jira">
+    **Issue Tracking**
+    - Create Jira issues
+    - Link to epics/stories
+    - Development workflow
+    - Bug tracking integration
+  </Card>
+  <Card title="Linear" icon="linear">
+    **Product Development**
+    - Feature request creation
+    - Sprint planning integration
+    - Development tracking
+    - Product roadmap alignment
+  </Card>
+  <Card title="Monday.com" icon="monday">
+    **Work Management**
+    - Board synchronization
+    - Status mirroring
+    - Timeline integration
+    - Resource planning
+  </Card>
+</CardGroup>
+
+### Communication Tools
+
+<Accordion>
+  <AccordionItem title="Slack Integration">
+    **Team Notifications**
+    
+    **Automatic Notifications:**
+    - New action items assigned
+    - Status updates and completions
+    - Deadline reminders
+    - Blocker alerts
+    
+    **Slack Commands:**
+    ```
+    /optiverse tasks          - View your assigned tasks
+    /optiverse tasks @john    - View John's tasks
+    /optiverse complete 123   - Mark task #123 as complete
+    /optiverse status 123     - Update task #123 status
+    ```
+    
+    **Channel Integration:**
+    - Post action items to project channels
+    - Daily/weekly task summaries
+    - Team standup integration
+    - Progress celebration
+  </AccordionItem>
+  
+  <AccordionItem title="Email Automation">
+    **Email Workflows**
+    
+    **Automated Emails:**
+    - Task assignment notifications
+    - Deadline reminder emails
+    - Completion confirmations
+    - Weekly digest reports
+    
+    **Email Templates:**
+    - Customizable notification formats
+    - Team-specific messaging
+    - Priority-based urgency
+    - Action-oriented content
+  </AccordionItem>
+</Accordion>
+
+## Advanced Action Item Features
+
+### Smart Suggestions
+
+<Warning>
+**AI Learning**: The suggestion system improves over time by learning from your team's patterns and preferences.
+</Warning>
+
+<Tabs>
+  <Tab title="Assignment Suggestions">
+    **Intelligent Assignment**
+    
+    **AI-Powered Recommendations:**
+    - Best person for the task based on expertise
+    - Workload balancing across team members
+    - Historical performance and success rates
+    - Availability and current commitments
+    
+    **Context Factors:**
+    - Previous similar task assignments
+    - Subject matter expertise
+    - Current workload and capacity
+    - Team collaboration patterns
+  </Tab>
+  
+  <Tab title="Deadline Suggestions">
+    **Realistic Timeline Estimation**
+    
+    **Deadline Factors:**
+    - Task complexity assessment
+    - Historical completion times
+    - Team member availability
+    - Project dependency requirements
+    
+    **Smart Scheduling:**
+    - Avoid conflicting deadlines
+    - Consider holidays and time off
+    - Balance workload distribution
+    - Account for review and approval time
+  </Tab>
+  
+  <Tab title="Template Suggestions">
+    **Task Template Automation**
+    
+    **Pattern Recognition:**
+    - Recurring meeting action items
+    - Similar project task structures
+    - Common workflow patterns
+    - Best practice templates
+    
+    **Template Features:**
+    - Pre-filled task details
+    - Standard assignment patterns
+    - Consistent deadline structures
+    - Quality checklists
+  </Tab>
+</Tabs>
+
+### Bulk Operations
+
+<Steps>
+  <Step title="Batch Selection">
+    **Multi-Task Operations**
+    - Select multiple action items
+    - Filter-based bulk selection
+    - Project-wide task selection
+    - Team member-specific grouping
+  </Step>
+  
+  <Step title="Bulk Actions">
+    **Mass Updates**
+    - Status updates for multiple tasks
+    - Deadline adjustments
+    - Priority level changes
+    - Reassignment operations
+    - Tag and label applications
+  </Step>
+  
+  <Step title="Workflow Automation">
+    **Process Streamlining**
+    - Automated status progressions
+    - Conditional task creation
+    - Dependency-based triggers
+    - Integration rule applications
+  </Step>
+</Steps>
+
+### Analytics and Reporting
+
+<CardGroup cols={3}>
+  <Card title="Completion Metrics" icon="chart-line">
+    **Performance Tracking**
+    - Task completion rates
+    - Average completion times
+    - On-time delivery statistics
+    - Quality assessment scores
+  </Card>
+  <Card title="Team Analytics" icon="users">
+    **Team Performance**
+    - Individual productivity metrics
+    - Collaboration effectiveness
+    - Workload distribution analysis
+    - Skill development tracking
+  </Card>
+  <Card title="Process Insights" icon="lightbulb">
+    **Workflow Optimization**
+    - Bottleneck identification
+    - Process improvement opportunities
+    - Automation recommendations
+    - Best practice sharing
+  </Card>
+</CardGroup>
+
+## Best Practices
+
+### Creating Effective Action Items
+
+<Accordion>
+  <AccordionItem title="SMART Action Items">
+    **Quality Standards**
+    
+    **SMART Criteria:**
+    - **Specific**: Clear and well-defined
+    - **Measurable**: Progress can be tracked
+    - **Achievable**: Realistic and attainable
+    - **Relevant**: Important to project/team goals
+    - **Time-bound**: Has a clear deadline
+    
+    **Examples:**
+    ```
+    ❌ Poor: "Improve the website"
+    ✅ SMART: "Increase website loading speed to under 3 seconds by March 15th"
+    
+    ❌ Poor: "Talk to client"
+    ✅ SMART: "Schedule and conduct client feedback session about new feature proposal by end of week"
+    ```
+  </AccordionItem>
+  
+  <AccordionItem title="Clear Ownership">
+    **Assignment Best Practices**
+    
+    **Single Point of Accountability:**
+    - Assign to one primary owner
+    - Avoid shared responsibility ambiguity
+    - Clearly define decision-making authority
+    - Establish communication protocols
+    
+    **Collaborative Tasks:**
+    - Designate a lead coordinator
+    - Define specific roles for each contributor
+    - Set clear collaboration expectations
+    - Establish progress reporting structure
+  </AccordionItem>
+</Accordion>
+
+### Managing Action Item Lifecycle
+
+<Steps>
+  <Step title="Regular Reviews">
+    **Consistent Monitoring**
+    - Daily personal task reviews
+    - Weekly team action item check-ins
+    - Monthly progress assessments
+    - Quarterly process improvements
+  </Step>
+  
+  <Step title="Status Updates">
+    **Communication Protocols**
+    - Regular progress updates
+    - Early blocker identification
+    - Stakeholder communication
+    - Deadline adjustment requests
+  </Step>
+  
+  <Step title="Completion Standards">
+    **Quality Assurance**
+    - Clear completion criteria
+    - Stakeholder approval processes
+    - Documentation requirements
+    - Lessons learned capture
+  </Step>
+</Steps>
+
+### Team Coordination
+
+<CardGroup cols={2}>
+  <Card title="Daily Standups" icon="users">
+    **Daily Coordination**
+    - Review action item progress
+    - Identify blockers and dependencies
+    - Plan daily priorities
+    - Request help and resources
+  </Card>
+  <Card title="Weekly Reviews" icon="calendar">
+    **Progress Assessment**
+    - Analyze completion rates
+    - Discuss process improvements
+    - Celebrate achievements
+    - Address systemic issues
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+### Common Issues
+
+<AccordionGroup>
+  <Accordion title="Action Items Not Being Created">
+    **Possible Causes:**
+    - AI not recognizing task language
+    - Meeting processing incomplete
+    - Settings not configured properly
+    - Integration not enabled
+    
+    **Solutions:**
+    - Use explicit task language
+    - Wait for meeting processing completion
+    - Check AI settings and sensitivity
+    - Verify integration configurations
+  </Accordion>
+  
+  <Accordion title="Missing Assignments">
+    **Possible Causes:**
+    - Unclear responsibility statements
+    - Multiple potential assignees mentioned
+    - Context insufficient for AI
+    - Manual review needed
+    
+    **Solutions:**
+    - Use clear assignment language
+    - Specify single responsible person
+    - Add context and details
+    - Review and edit AI suggestions
+  </Accordion>
+  
+  <Accordion title="Integration Sync Issues">
+    **Possible Causes:**
+    - API connectivity problems
+    - Permission mismatches
+    - Field mapping errors
+    - Rate limiting issues
+    
+    **Solutions:**
+    - Check integration status
+    - Verify permissions and access
+    - Review field mapping configuration
+    - Contact support for persistent issues
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<Info>
+**Action Item Success**: Effective action item management requires consistent team adoption and regular process refinement. Start with basic practices and evolve your workflow based on team needs.
+</Info>
+
+**Next Steps:**
+- [Meeting Analytics](/optiverse/features/meeting-analytics) - Track action item effectiveness
+- [Kanban Boards](/optiverse/organization/kanban-boards) - Visualize task workflows
+- [Project Management Integrations](/optiverse/integrations/project-management) - Connect external tools 

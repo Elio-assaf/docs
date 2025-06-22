@@ -1,0 +1,621 @@
+---
+title: 'Kanban Boards'
+description: 'Organize meeting action items and projects with visual Kanban boards'
+icon: 'table-columns'
+---
+
+Transform your meeting action items and project tasks into visual Kanban boards for better organization and tracking. Manage workflows from discussion to completion with intuitive drag-and-drop interfaces.
+
+## Board Creation
+
+Optiverse's Kanban boards provide a visual way to organize and track meeting outcomes, action items, and project progress. Transform your meeting insights into actionable workflows that keep your team aligned and productive.
+
+## What are Kanban Boards?
+
+Kanban boards in Optiverse are visual project management tools that help you:
+- **Organize action items** from meetings into workflow stages
+- **Track progress** of meeting outcomes and decisions
+- **Collaborate visually** with your team on follow-ups
+- **Connect meeting insights** to ongoing projects
+
+<img src="/images/organization/kanban-overview.png" alt="Kanban Board Overview" />
+
+## Board Structure
+
+### Default Columns
+
+<CardGroup cols={4}>
+  <Card title="Backlog" icon="inbox">
+    **Ideas & Planning**
+    - New action items from meetings
+    - Ideas requiring discussion
+    - Future project considerations
+    - Unassigned tasks
+  </Card>
+  <Card title="To Do" icon="clipboard">
+    **Ready to Start**
+    - Assigned and prioritized tasks
+    - Clear action items with owners
+    - Defined deliverables
+    - Sprint-ready items
+  </Card>
+  <Card title="In Progress" icon="spinner">
+    **Active Work**
+    - Currently being worked on
+    - Tasks with active assignees
+    - Work in development
+    - Items requiring follow-up
+  </Card>
+  <Card title="Done" icon="check">
+    **Completed Work**
+    - Finished action items
+    - Delivered outcomes
+    - Completed decisions
+    - Archived items
+  </Card>
+</CardGroup>
+
+### Custom Columns
+
+Create custom columns to match your workflow:
+
+<Tabs>
+  <Tab title="Sales Process">
+    **Sales Team Workflow**
+    ```
+    🏃 Backlog → 📞 Qualified → 💬 Demo → 📋 Proposal → ✅ Closed Won
+    ```
+    
+    **Column Examples:**
+    - Lead Qualification
+    - Discovery Call Scheduled
+    - Demo Completed
+    - Proposal Sent
+    - Contract Negotiation
+    - Closed Won/Lost
+  </Tab>
+  
+  <Tab title="Development Workflow">
+    **Engineering Team Process**
+    ```
+    📝 Backlog → 🔧 Development → 🧪 Testing → 📖 Review → 🚀 Deployed
+    ```
+    
+    **Column Examples:**
+    - Feature Planning
+    - In Development
+    - Code Review
+    - QA Testing
+    - Staging
+    - Production
+  </Tab>
+  
+  <Tab title="Marketing Campaign">
+    **Campaign Management**
+    ```
+    💡 Ideas → 📋 Planning → 🎨 Creative → 📅 Scheduled → 📊 Active → 📈 Analysis
+    ```
+    
+    **Column Examples:**
+    - Campaign Ideas
+    - Content Planning
+    - Creative Development
+    - Review & Approval
+    - Live Campaign
+    - Performance Analysis
+  </Tab>
+</Tabs>
+
+## Creating and Managing Boards
+
+### Setting Up a New Board
+
+<Steps>
+  <Step title="Create Board">
+    **Board Creation**
+    1. Navigate to Organization → Kanban Boards
+    2. Click "New Board"
+    3. Choose template or start from scratch
+    4. Name your board and add description
+    
+    <img src="/images/organization/create-board.png" alt="Create New Board" />
+  </Step>
+  
+  <Step title="Configure Columns">
+    **Column Setup**
+    - Add/remove columns as needed
+    - Set column work-in-progress (WIP) limits
+    - Configure column rules and automation
+    - Set up column-specific labels and tags
+  </Step>
+  
+  <Step title="Invite Team Members">
+    **Team Collaboration**
+    - Add team members with appropriate permissions
+    - Assign roles (viewer, contributor, admin)
+    - Configure notification preferences
+    - Set up integration connections
+  </Step>
+  
+  <Step title="Import Existing Items">
+    **Populate Board**
+    - Import action items from recent meetings
+    - Add existing project tasks
+    - Connect to external project management tools
+    - Set up automated item creation rules
+  </Step>
+</Steps>
+
+### Board Templates
+
+<CardGroup cols={3}>
+  <Card title="Meeting Follow-ups" icon="calendar">
+    **Standard Template**
+    - Action Items
+    - In Progress
+    - Waiting For
+    - Completed
+    
+    **Best For:** General meeting outcomes
+  </Card>
+  <Card title="Sprint Planning" icon="rocket">
+    **Agile Template**
+    - Product Backlog
+    - Sprint Backlog
+    - In Development
+    - Testing
+    - Done
+    
+    **Best For:** Software development teams
+  </Card>
+  <Card title="Sales Pipeline" icon="handshake">
+    **Sales Template**
+    - New Leads
+    - Qualified
+    - Proposal
+    - Negotiation
+    - Closed
+    
+    **Best For:** Sales and business development
+  </Card>
+</CardGroup>
+
+## Working with Cards
+
+### Card Creation
+
+<Accordion>
+  <AccordionItem title="From Meetings">
+    **Automatic Card Creation**
+    - Action items automatically become cards
+    - Meeting decisions create reference cards
+    - Follow-up tasks are added to boards
+    - Integration rules determine board assignment
+    
+    **Manual Addition**
+    - Add cards directly from meeting summaries
+    - Link specific meeting moments to cards
+    - Reference transcript sections
+    - Connect to meeting recordings
+  </AccordionItem>
+  
+  <AccordionItem title="Manual Creation">
+    **Quick Card Creation**
+    - Click "+" in any column
+    - Use keyboard shortcut (Ctrl+N)
+    - Quick-add from board header
+    - Bulk import from CSV/spreadsheet
+    
+    **Detailed Card Setup**
+    - Title and description
+    - Assignee and due date
+    - Priority and labels
+    - Attachments and links
+  </AccordionItem>
+</Accordion>
+
+### Card Information
+
+<Tabs>
+  <Tab title="Basic Information">
+    **Essential Card Data**
+    
+    **Required Fields:**
+    - Card title
+    - Current column/status
+    - Creation date
+    
+    **Optional Fields:**
+    - Description and details
+    - Assignee(s)
+    - Due date
+    - Priority level
+    - Estimated effort
+    - Labels and tags
+  </Tab>
+  
+  <Tab title="Meeting Context">
+    **Connected Meeting Data**
+    
+    **Automatic Links:**
+    - Source meeting reference
+    - Relevant transcript excerpts
+    - Related action items
+    - Decision context
+    
+    **Smart Connections:**
+    - Similar cards from past meetings
+    - Related project items
+    - Connected team members
+    - Dependent tasks
+  </Tab>
+  
+  <Tab title="Collaboration">
+    **Team Interaction**
+    
+    **Comments & Updates:**
+    - Progress comments
+    - Status updates
+    - Questions and blockers
+    - File attachments
+    
+    **Activity Tracking:**
+    - Status change history
+    - Assignment changes
+    - Comment timeline
+    - Edit log
+  </Tab>
+</Tabs>
+
+### Card Management
+
+<Steps>
+  <Step title="Moving Cards">
+    **Status Updates**
+    - Drag and drop between columns
+    - Use keyboard shortcuts
+    - Bulk move multiple cards
+    - Set up automated triggers
+  </Step>
+  
+  <Step title="Editing Details">
+    **Card Updates**
+    - Click card to open details
+    - Edit in-line for quick changes
+    - Use bulk edit for multiple cards
+    - Template-based updates
+  </Step>
+  
+  <Step title="Collaboration">
+    **Team Interaction**
+    - @mention team members in comments
+    - Subscribe to card notifications
+    - Share cards via email or Slack
+    - Export card details
+  </Step>
+</Steps>
+
+## Advanced Features
+
+### Automation Rules
+
+<Accordion>
+  <AccordionItem title="Meeting Integration">
+    **Automatic Board Updates**
+    
+    **Rule Examples:**
+    ```
+    When: New action item created in sales meeting
+    Then: Add card to "Sales Pipeline" board in "To Do" column
+    
+    When: Meeting decision marked as "approved"
+    Then: Move related cards to "In Progress" column
+    
+    When: Action item marked complete in meeting
+    Then: Move card to "Done" and notify assignee
+    ```
+  </AccordionItem>
+  
+  <AccordionItem title="Status Automation">
+    **Workflow Triggers**
+    
+    **Common Automations:**
+    - Auto-assign cards based on keywords
+    - Move cards when due dates approach
+    - Notify stakeholders of status changes
+    - Create recurring tasks from templates
+    - Archive completed cards after X days
+    
+    **Integration Triggers:**
+    - Sync status with external project tools
+    - Create calendar events for due dates
+    - Send Slack notifications for updates
+    - Update CRM records when cards move
+  </AccordionItem>
+</Accordion>
+
+### Filtering and Views
+
+<CardGroup cols={2}>
+  <Card title="Filters" icon="filter">
+    **Card Filtering**
+    - Filter by assignee
+    - Filter by due date
+    - Filter by priority
+    - Filter by labels/tags
+    - Filter by source meeting
+    - Custom filter combinations
+  </Card>
+  <Card title="Views" icon="eye">
+    **Display Options**
+    - Board view (standard Kanban)
+    - List view (table format)
+    - Calendar view (due dates)
+    - Timeline view (Gantt chart)
+    - Card-only view (minimal)
+    - Custom view configurations
+  </Card>
+</CardGroup>
+
+### Analytics and Reporting
+
+<Tabs>
+  <Tab title="Flow Metrics">
+    **Workflow Analysis**
+    
+    **Key Metrics:**
+    - Cycle time (average time in each column)
+    - Lead time (total time from creation to completion)
+    - Throughput (cards completed per time period)
+    - Work-in-progress (WIP) levels
+    
+    **Visualizations:**
+    - Cumulative flow diagrams
+    - Cycle time histograms
+    - Throughput trends
+    - Bottleneck analysis
+  </Tab>
+  
+  <Tab title="Team Performance">
+    **Collaboration Insights**
+    
+    **Individual Metrics:**
+    - Cards assigned vs. completed
+    - Average cycle time per person
+    - Collaboration patterns
+    - Contribution analysis
+    
+    **Team Metrics:**
+    - Team velocity trends
+    - Collaboration frequency
+    - Cross-functional work patterns
+    - Meeting-to-action conversion rates
+  </Tab>
+  
+  <Tab title="Meeting Integration">
+    **Meeting Effectiveness**
+    
+    **Action Item Tracking:**
+    - Meeting-to-board conversion rates
+    - Action item completion rates
+    - Follow-up effectiveness
+    - Decision implementation tracking
+    
+    **ROI Analysis:**
+    - Time from meeting to completion
+    - Meeting outcome success rates
+    - Resource allocation effectiveness
+    - Goal achievement tracking
+  </Tab>
+</Tabs>
+
+## Integration with External Tools
+
+### Project Management Platforms
+
+<CardGroup cols={4}>
+  <Card title="Jira" icon="jira">
+    **Issue Tracking**
+    - Sync cards with Jira issues
+    - Bi-directional status updates
+    - Link to epics and stories
+    - Sprint planning integration
+  </Card>
+  <Card title="Asana" icon="asana">
+    **Task Management**
+    - Mirror Asana projects
+    - Sync task assignments
+    - Update project timelines
+    - Team collaboration features
+  </Card>
+  <Card title="Linear" icon="linear">
+    **Product Development**
+    - Connect to Linear issues
+    - Sync development status
+    - Link to product roadmaps
+    - Engineering workflow integration
+  </Card>
+  <Card title="Monday.com" icon="monday">
+    **Work Management**
+    - Board synchronization
+    - Status mirroring
+    - Timeline alignment
+    - Resource planning sync
+  </Card>
+</CardGroup>
+
+### Communication Integration
+
+<Steps>
+  <Step title="Slack Integration">
+    **Team Communication**
+    - Post board updates to channels
+    - Create cards from Slack messages
+    - Notify teams of status changes
+    - Use slash commands for quick updates
+  </Step>
+  
+  <Step title="Email Notifications">
+    **Stakeholder Updates**
+    - Digest emails for board changes
+    - Individual card notifications
+    - Deadline reminders
+    - Weekly progress summaries
+  </Step>
+  
+  <Step title="Calendar Integration">
+    **Timeline Management**
+    - Sync due dates with calendar
+    - Create events for milestones
+    - Meeting reminders for reviews
+    - Timeline visualization
+  </Step>
+</Steps>
+
+## Best Practices
+
+### Board Organization
+
+<Warning>
+**Keep it Simple**: Start with basic columns and add complexity gradually. Too many columns can slow down workflow and confuse team members.
+</Warning>
+
+<Accordion>
+  <AccordionItem title="Column Design">
+    **Effective Column Strategy**
+    
+    **Do:**
+    - Use clear, action-oriented column names
+    - Limit columns to 5-7 for optimal flow
+    - Set appropriate WIP limits
+    - Align columns with actual workflow steps
+    
+    **Don't:**
+    - Create columns for every possible status
+    - Use vague or confusing column names
+    - Ignore WIP limits consistently
+    - Change column structure frequently
+  </AccordionItem>
+  
+  <AccordionItem title="Card Management">
+    **Card Best Practices**
+    
+    **Writing Good Cards:**
+    - Use clear, actionable titles
+    - Include acceptance criteria
+    - Assign realistic due dates
+    - Add relevant context and links
+    
+    **Card Hygiene:**
+    - Regular cleanup of completed cards
+    - Update status promptly
+    - Archive outdated items
+    - Maintain consistent labeling
+  </AccordionItem>
+</Accordion>
+
+### Team Collaboration
+
+<CardGroup cols={2}>
+  <Card title="Daily Standups" icon="users">
+    **Board-Based Standups**
+    - Review board during team meetings
+    - Identify blockers visually
+    - Plan day based on board status
+    - Update progress in real-time
+  </Card>
+  <Card title="Review Meetings" icon="chart-bar">
+    **Regular Board Reviews**
+    - Weekly workflow retrospectives
+    - Monthly board optimization
+    - Quarterly process improvements
+    - Annual strategy alignment
+  </Card>
+</CardGroup>
+
+### Performance Optimization
+
+<Steps>
+  <Step title="Monitor Metrics">
+    **Track Key Indicators**
+    - Cycle time trends
+    - WIP limit adherence
+    - Completion rates
+    - Team velocity
+  </Step>
+  
+  <Step title="Identify Bottlenecks">
+    **Workflow Analysis**
+    - Look for columns with consistent buildup
+    - Identify long-residence cards
+    - Analyze blocked items
+    - Review team capacity
+  </Step>
+  
+  <Step title="Continuous Improvement">
+    **Iterative Enhancement**
+    - Adjust WIP limits based on data
+    - Refine column definitions
+    - Improve automation rules
+    - Enhance team training
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+### Common Issues
+
+<AccordionGroup>
+  <Accordion title="Cards Not Moving">
+    **Possible Causes:**
+    - Permission restrictions
+    - Workflow automation conflicts
+    - WIP limit constraints
+    - Browser/connectivity issues
+    
+    **Solutions:**
+    - Check user permissions
+    - Review automation rules
+    - Verify WIP limit settings
+    - Try different browser or refresh
+  </Accordion>
+  
+  <Accordion title="Missing Action Items">
+    **Possible Causes:**
+    - Integration not configured
+    - Filtering hiding cards
+    - Wrong board assignment
+    - Processing delays
+    
+    **Solutions:**
+    - Verify meeting integration settings
+    - Clear all filters
+    - Check other boards
+    - Wait for processing completion
+  </Accordion>
+  
+  <Accordion title="Sync Issues">
+    **Possible Causes:**
+    - External tool connectivity
+    - Permission mismatches
+    - API rate limits
+    - Configuration errors
+    
+    **Solutions:**
+    - Reconnect external integrations
+    - Verify permission scopes
+    - Check API usage limits
+    - Review integration settings
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<Info>
+**Visual Project Success**: Kanban boards work best when the entire team is engaged and the board reflects actual work patterns. Regular review and adjustment ensure continued effectiveness.
+</Info>
+
+**Next Steps:**
+- [Team Collaboration](/optiverse/organization/team-collaboration) - Enhance team productivity
+- [Protocols](/optiverse/organization/protocols) - Standardize meeting processes
+- [Project Management Integrations](/optiverse/integrations/project-management) - Connect external tools 

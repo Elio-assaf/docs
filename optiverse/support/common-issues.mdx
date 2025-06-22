@@ -1,0 +1,624 @@
+---
+title: 'Common Issues & Solutions'
+description: 'Troubleshoot common problems and find quick solutions'
+icon: 'question-circle'
+---
+
+Find solutions to the most frequently encountered issues when using Optiverse. This comprehensive troubleshooting guide covers setup problems, integration issues, and performance optimization.
+
+## Meeting Issues
+
+### Meeting Assistant Not Joining
+
+<Accordion>
+  <AccordionItem title="Symptoms">
+    - AI assistant doesn't appear in meeting
+    - No transcription or notes generated
+    - Meeting shows as "Not Started" in dashboard
+    - No recording or analysis available
+  </AccordionItem>
+  
+  <AccordionItem title="Common Causes & Solutions">
+    **Permission Issues**
+    ```
+    ✅ Solution:
+    1. Check meeting platform permissions
+    2. Ensure Optiverse has calendar access
+    3. Verify meeting link is accessible
+    4. Confirm audio/video permissions granted
+    ```
+    
+    **Incorrect Meeting Setup**
+    ```
+    ✅ Solution:
+    1. Verify meeting is properly scheduled in Optiverse
+    2. Check meeting start time and time zone
+    3. Ensure meeting type is correctly configured
+    4. Confirm integration is active and connected
+    ```
+    
+    **Technical Issues**
+    ```
+    ✅ Solution:
+    1. Check internet connection stability
+    2. Verify meeting platform is accessible
+    3. Try refreshing the meeting page
+    4. Test with a different browser/device
+    ```
+  </AccordionItem>
+</Accordion>
+
+### Poor Transcription Quality
+
+<CardGroup cols={2}>
+  <Card title="Audio Issues" icon="microphone">
+    **Symptoms:**
+    - Incomplete or garbled transcription
+    - Missing speaker identification
+    - Incorrect words or phrases
+    
+    **Solutions:**
+    - Use high-quality microphones
+    - Minimize background noise
+    - Ensure stable internet connection
+    - Speak clearly and at moderate pace
+  </Card>
+  <Card title="Setup Issues" icon="cog">
+    **Symptoms:**
+    - No transcription generated
+    - Wrong language detected
+    - Speaker names incorrect
+    
+    **Solutions:**
+    - Check microphone permissions
+    - Verify language settings
+    - Configure speaker profiles
+    - Test audio before important meetings
+  </Card>
+</CardGroup>
+
+### Action Items Not Detected
+
+<Steps>
+  <Step title="Check Language Patterns">
+    **Use Explicit Task Language**
+    ```
+    ❌ "We should probably look into that"
+    ✅ "John will research pricing options by Friday"
+    
+    ❌ "Maybe someone can handle this"
+    ✅ "Sarah is assigned to update the documentation"
+    ```
+  </Step>
+  
+  <Step title="Verify AI Settings">
+    **Configuration Check**
+    - Ensure action item extraction is enabled
+    - Check AI sensitivity settings
+    - Verify meeting type is configured correctly
+    - Review custom protocol settings
+  </Step>
+  
+  <Step title="Manual Review">
+    **Post-Meeting Actions**
+    - Review AI suggestions and edit as needed
+    - Add missed action items manually
+    - Verify assignees and due dates
+    - Provide feedback to improve AI learning
+  </Step>
+</Steps>
+
+## Integration Problems
+
+### CRM Integration Not Syncing
+
+<Tabs>
+  <Tab title="HubSpot Issues">
+    **Common Problems:**
+    - Meeting notes not appearing in contacts
+    - Deal stages not updating
+    - Duplicate activities created
+    
+    **Solutions:**
+    ```bash
+    1. Check OAuth Connection
+       - Go to Settings → Integrations → HubSpot
+       - Verify "Connected" status
+       - Reconnect if needed
+    
+    2. Review Field Mapping
+       - Ensure contact/deal fields are mapped correctly
+       - Check for required field conflicts
+       - Verify data format compatibility
+    
+    3. Test Permissions
+       - Confirm HubSpot user has necessary permissions
+       - Check API rate limits
+       - Verify account subscription level
+    ```
+  </Tab>
+  
+  <Tab title="Salesforce Issues">
+    **Common Problems:**
+    - Opportunities not updating
+    - Account records missing meeting data
+    - Task creation failures
+    
+    **Solutions:**
+    ```bash
+    1. API Permissions
+       - Verify Salesforce user permissions
+       - Check custom object access
+       - Review field-level security
+    
+    2. Data Validation
+       - Ensure required fields are populated
+       - Check data type compatibility
+       - Verify record ownership rules
+    
+    3. Sync Settings
+       - Review sync frequency settings
+       - Check error logs for specific failures
+       - Test with simplified data first
+    ```
+  </Tab>
+</Tabs>
+
+### Slack Integration Problems
+
+<Accordion>
+  <AccordionItem title="Messages Not Posting">
+    **Symptoms:**
+    - Meeting summaries not appearing in channels
+    - Bot not responding to commands
+    - Integration shows as connected but inactive
+    
+    **Solutions:**
+    1. **Check Bot Permissions**
+       - Verify bot is added to target channels
+       - Ensure posting permissions are granted
+       - Check workspace admin settings
+    
+    2. **Review Channel Configuration**
+       - Confirm channel mapping is correct
+       - Check private vs. public channel settings
+       - Verify channel still exists and bot has access
+    
+    3. **Test Bot Commands**
+       - Try `/optiverse help` in a channel
+       - Test with simple search queries
+       - Check bot status in Slack app directory
+  </AccordionItem>
+  
+  <AccordionItem title="Search Commands Not Working">
+    **Symptoms:**
+    - `/optiverse search` returns no results
+    - Commands hang or timeout
+    - Error messages in Slack
+    
+    **Solutions:**
+    1. **Verify Search Permissions**
+       - Check user has access to meeting data
+       - Verify search scope settings
+       - Confirm workspace permissions
+    
+    2. **Test Search Syntax**
+       ```
+       ✅ Correct: /optiverse search "project timeline"
+       ❌ Incorrect: /optiverse "project timeline"
+       
+       ✅ Correct: /optiverse recent meetings
+       ❌ Incorrect: /optiverse meetings recent
+       ```
+  </AccordionItem>
+</Accordion>
+
+## Search & Data Issues
+
+### Search Not Finding Results
+
+<Warning>
+**Indexing Delay**: New meeting content may take a few minutes to become searchable. Recent meetings might not appear immediately in search results.
+</Warning>
+
+<CardGroup cols={3}>
+  <Card title="Query Issues" icon="search">
+    **Common Problems:**
+    - Too broad or vague queries
+    - Incorrect search syntax
+    - Typos in search terms
+    
+    **Solutions:**
+    - Use specific names and dates
+    - Try different keywords
+    - Use quotation marks for exact phrases
+    - Check spelling and grammar
+  </Card>
+  <Card title="Permission Issues" icon="lock">
+    **Common Problems:**
+    - Results filtered by permissions
+    - Private meeting access denied
+    - Team boundaries restricting results
+    
+    **Solutions:**
+    - Verify meeting access permissions
+    - Check team membership
+    - Request access from meeting organizer
+    - Review privacy settings
+  </Card>
+  <Card title="Data Issues" icon="database">
+    **Common Problems:**
+    - Content not indexed
+    - Corrupted meeting data
+    - Missing transcription
+    
+    **Solutions:**
+    - Wait for indexing to complete
+    - Check meeting processing status
+    - Contact support for data recovery
+    - Re-process meeting if needed
+  </Card>
+</CardGroup>
+
+### Slow Search Performance
+
+<Steps>
+  <Step title="Check Query Complexity">
+    **Optimize Search Queries**
+    ```
+    ❌ Slow: all meetings with anyone about anything
+    ✅ Fast: meetings with John about project X last week
+    
+    ❌ Slow: search across all time without filters
+    ✅ Fast: search within specific date range
+    ```
+  </Step>
+  
+  <Step title="Use Filters">
+    **Narrow Search Scope**
+    - Apply date range filters
+    - Specify meeting types
+    - Filter by participants
+    - Use content type filters
+  </Step>
+  
+  <Step title="Browser Optimization">
+    **Improve Client Performance**
+    - Clear browser cache
+    - Disable unnecessary extensions
+    - Use supported browsers
+    - Ensure sufficient system memory
+  </Step>
+</Steps>
+
+## Authentication & Access Issues
+
+### Can't Log In
+
+<Accordion>
+  <AccordionItem title="Password Issues">
+    **Symptoms:**
+    - "Invalid credentials" error
+    - Password reset not working
+    - Account locked messages
+    
+    **Solutions:**
+    1. **Reset Password**
+       - Use "Forgot Password" link
+       - Check email spam folder
+       - Try password reset multiple times if needed
+    
+    2. **Check Account Status**
+       - Verify account is active
+       - Check if organization subscription is current
+       - Confirm email address is correct
+    
+    3. **Browser Issues**
+       - Clear cookies and cache
+       - Disable password managers temporarily
+       - Try incognito/private browsing
+  </AccordionItem>
+  
+  <AccordionItem title="SSO Problems">
+    **Symptoms:**
+    - SSO login redirects fail
+    - "Authentication failed" errors
+    - Stuck on login page
+    
+    **Solutions:**
+    1. **Check SSO Configuration**
+       - Verify SSO is enabled for your organization
+       - Check identity provider settings
+       - Confirm user exists in IdP directory
+    
+    2. **Clear SSO Session**
+       - Log out of all identity provider sessions
+       - Clear browser data
+       - Try direct login URL
+    
+    3. **Contact IT Admin**
+       - Verify user permissions in IdP
+       - Check SAML/OIDC configuration
+       - Review audit logs for failures
+  </AccordionItem>
+</Accordion>
+
+### Permission Denied Errors
+
+<CardGroup cols={2}>
+  <Card title="Meeting Access" icon="calendar">
+    **Common Scenarios:**
+    - Can't join private meetings
+    - Missing meeting history
+    - Limited feature access
+    
+    **Solutions:**
+    - Request access from meeting organizer
+    - Check team membership
+    - Verify subscription level
+    - Review privacy settings
+  </Card>
+  <Card title="Integration Access" icon="plug">
+    **Common Scenarios:**
+    - Can't connect external tools
+    - Integration setup fails
+    - Sync permissions denied
+    
+    **Solutions:**
+    - Check admin permissions
+    - Verify OAuth scopes
+    - Review organization policies
+    - Contact system administrator
+  </Card>
+</CardGroup>
+
+## Performance Issues
+
+### Slow Loading Times
+
+<Tabs>
+  <Tab title="Dashboard Loading">
+    **Symptoms:**
+    - Dashboard takes long to load
+    - Widgets not appearing
+    - Timeout errors
+    
+    **Solutions:**
+    ```bash
+    1. Browser Optimization
+       - Update to latest browser version
+       - Clear cache and cookies
+       - Disable unnecessary extensions
+       - Close unused tabs
+    
+    2. Network Issues
+       - Check internet connection speed
+       - Try different network if possible
+       - Use wired connection vs. WiFi
+       - Contact IT about firewall/proxy issues
+    
+    3. Account Optimization
+       - Reduce number of dashboard widgets
+       - Archive old meetings
+       - Clean up saved searches
+       - Optimize integration settings
+    ```
+  </Tab>
+  
+  <Tab title="Meeting Processing">
+    **Symptoms:**
+    - Long delays for transcription
+    - Summaries taking hours to generate
+    - Action items not appearing
+    
+    **Solutions:**
+    ```bash
+    1. Check Processing Queue
+       - View meeting processing status
+       - Wait for current processing to complete
+       - Avoid starting multiple meetings simultaneously
+    
+    2. Meeting Optimization
+       - Use shorter meeting durations when possible
+       - Ensure good audio quality
+       - Limit number of participants if feasible
+       - Use supported meeting platforms
+    
+    3. Subscription Limits
+       - Check processing quota usage
+       - Upgrade plan if needed
+       - Review priority processing options
+    ```
+  </Tab>
+</Tabs>
+
+## Mobile App Issues
+
+### App Not Working
+
+<CardGroup cols={2}>
+  <Card title="iOS Issues" icon="mobile">
+    **Common Problems:**
+    - App crashes on startup
+    - Features not working
+    - Sync issues
+    
+    **Solutions:**
+    - Update to latest app version
+    - Restart device
+    - Check iOS version compatibility
+    - Reinstall app if needed
+  </Card>
+  <Card title="Android Issues" icon="mobile">
+    **Common Problems:**
+    - Permission errors
+    - Background sync failing
+    - Notification issues
+    
+    **Solutions:**
+    - Check app permissions
+    - Disable battery optimization
+    - Update Android OS
+    - Clear app cache and data
+  </Card>
+</CardGroup>
+
+### Sync Problems
+
+<Steps>
+  <Step title="Check Connection">
+    **Network Verification**
+    - Ensure stable internet connection
+    - Try switching between WiFi and cellular
+    - Check if other apps sync properly
+    - Verify no VPN interference
+  </Step>
+  
+  <Step title="Force Sync">
+    **Manual Refresh**
+    - Pull down on home screen to refresh
+    - Log out and back in
+    - Check sync status in settings
+    - Wait for background sync to complete
+  </Step>
+  
+  <Step title="Reset if Needed">
+    **Last Resort Options**
+    - Clear app cache (Android)
+    - Reinstall app
+    - Contact support for account reset
+    - Verify data backup before resetting
+  </Step>
+</Steps>
+
+## Data & Export Issues
+
+### Missing Meeting Data
+
+<Accordion>
+  <AccordionItem title="Partial Data Loss">
+    **Symptoms:**
+    - Some meetings missing from history
+    - Incomplete transcriptions
+    - Missing action items or summaries
+    
+    **Recovery Steps:**
+    1. **Check Archive Status**
+       - Look in archived meetings section
+       - Check if data was accidentally archived
+       - Review deleted items if available
+    
+    2. **Verify Processing**
+       - Check if meeting finished processing
+       - Look for processing error messages
+       - Try reprocessing if option available
+    
+    3. **Contact Support**
+       - Provide meeting details and timestamps
+       - Request data recovery assistance
+       - Check if backup restoration is needed
+  </AccordionItem>
+  
+  <AccordionItem title="Export Failures">
+    **Symptoms:**
+    - Export downloads fail
+    - Corrupted export files
+    - Missing data in exports
+    
+    **Solutions:**
+    1. **Try Different Formats**
+       - Switch between PDF, DOCX, CSV formats
+       - Export smaller date ranges
+       - Use different browsers
+    
+    2. **Check Permissions**
+       - Verify export permissions
+       - Check file size limits
+       - Review data access rights
+    
+    3. **Alternative Methods**
+       - Use API for programmatic access
+       - Export individual meetings
+       - Contact support for bulk exports
+  </AccordionItem>
+</Accordion>
+
+## Getting Additional Help
+
+### Before Contacting Support
+
+<Warning>
+**Information to Gather**: Having the right information ready speeds up support resolution significantly.
+</Warning>
+
+**Essential Information:**
+- Meeting ID or URL where issue occurred
+- Exact error messages (screenshots helpful)
+- Browser/device information
+- Steps to reproduce the issue
+- Time and date when issue occurred
+
+### Support Channels
+
+<CardGroup cols={3}>
+  <Card title="Knowledge Base" icon="book">
+    **Self-Service Resources**
+    - Comprehensive documentation
+    - Video tutorials
+    - FAQ sections
+    - Community forums
+  </Card>
+  <Card title="Live Chat" icon="message">
+    **Immediate Assistance**
+    - Available 24/7
+    - Technical support specialists
+    - Screen sharing capabilities
+    - Real-time troubleshooting
+  </Card>
+  <Card title="Email Support" icon="envelope">
+    **Detailed Issues**
+    - Complex technical problems
+    - Account and billing issues
+    - Feature requests
+    - Bug reports with logs
+  </Card>
+</CardGroup>
+
+### Escalation Process
+
+<Steps>
+  <Step title="Level 1 Support">
+    **Initial Contact**
+    - Basic troubleshooting
+    - Account verification
+    - Common issue resolution
+    - Documentation assistance
+  </Step>
+  
+  <Step title="Level 2 Support">
+    **Technical Specialists**
+    - Complex integration issues
+    - Advanced feature problems
+    - Performance optimization
+    - Custom configuration help
+  </Step>
+  
+  <Step title="Level 3 Support">
+    **Engineering Team**
+    - Product bugs and fixes
+    - Feature development requests
+    - System architecture issues
+    - Security-related problems
+  </Step>
+</Steps>
+
+---
+
+<Info>
+**Prevention is Better**: Many issues can be prevented by following best practices, keeping software updated, and regular system maintenance. Check our [Performance Optimization](/optiverse/support/performance-optimization) guide for proactive tips.
+</Info>
+
+**Related Resources:**
+- [Performance Optimization](/optiverse/support/performance-optimization) - Keep your system running smoothly
+- [Contact Support](/optiverse/support/contact-support) - Get personalized help
+- [Data Recovery](/optiverse/support/data-recovery) - Recover lost information 

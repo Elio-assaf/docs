@@ -1,35 +1,96 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Optiverse Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#2563EB",
+    "light": "#3B82F6",
+    "dark": "#1D4ED8"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Optiverse",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Getting Started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "optiverse/introduction",
+              "optiverse/quick-start",
+              "optiverse/setup-first-meeting",
+              "optiverse/dashboard-overview"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Core Features",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "optiverse/features/meeting-assistant",
+              "optiverse/features/smart-search",
+              "optiverse/features/meeting-analytics",
+              "optiverse/features/note-taking",
+              "optiverse/features/action-items",
+              "optiverse/features/summaries"
+            ]
+          },
+          {
+            "group": "Meeting Management",
+            "pages": [
+              "optiverse/meetings/scheduling",
+              "optiverse/meetings/incoming-meetings",
+              "optiverse/meetings/direct-meetings",
+              "optiverse/meetings/google-meet-integration",
+              "optiverse/meetings/meeting-records",
+              "optiverse/meetings/real-time-transcription"
+            ]
+          },
+          {
+            "group": "Organization & Productivity",
+            "pages": [
+              "optiverse/organization/folders",
+              "optiverse/organization/kanban-boards",
+              "optiverse/organization/protocols",
+              "optiverse/organization/team-collaboration"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "optiverse/integrations/overview",
+              "optiverse/integrations/crm-platforms",
+              "optiverse/integrations/project-management",
+              "optiverse/integrations/communication-tools",
+              "optiverse/integrations/note-taking-apps",
+              "optiverse/integrations/automation-workflows"
+            ]
+          },
+          {
+            "group": "Advanced Features",
+            "pages": [
+              "optiverse/advanced/rag-search",
+              "optiverse/advanced/ai-insights",
+              "optiverse/advanced/custom-protocols",
+              "optiverse/advanced/bulk-operations",
+              "optiverse/advanced/data-export"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "optiverse/settings/user-preferences",
+              "optiverse/settings/meeting-settings",
+              "optiverse/settings/notification-preferences",
+              "optiverse/settings/privacy-security",
+              "optiverse/settings/team-management"
+            ]
+          },
+          {
+            "group": "Troubleshooting & Support",
+            "pages": [
+              "optiverse/support/common-issues",
+              "optiverse/support/performance-optimization",
+              "optiverse/support/data-recovery",
+              "optiverse/support/contact-support"
             ]
           }
         ]
@@ -50,6 +111,30 @@
               "api-reference/endpoint/create",
               "api-reference/endpoint/delete",
               "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Guides",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "get-started/index",
+              "get-started/quickstart",
+              "get-started/development"
+            ]
+          },
+          {
+            "group": "Essentials",
+            "pages": [
+              "essentials/markdown",
+              "essentials/code",
+              "essentials/images",
+              "essentials/settings",
+              "essentials/navigation",
+              "essentials/reusable-snippets"
             ]
           }
         ]
@@ -76,8 +161,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/FullLogo_light.png",
+    "dark": "/logo/FullLogo_dark.png"
   },
   "navbar": {
     "links": [

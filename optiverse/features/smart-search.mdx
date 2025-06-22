@@ -1,0 +1,532 @@
+---
+title: 'Smart Search'
+description: 'Find any information across all your meetings with AI-powered search'
+icon: 'magnifying-glass'
+---
+
+Optiverse's Smart Search revolutionizes how you find information across all your meetings. Powered by Retrieval-Augmented Generation (RAG) technology, it understands context, interprets natural language queries, and delivers precise results from your entire meeting history in seconds.
+
+## What is Smart Search?
+
+Smart Search goes beyond simple keyword matching. It's an intelligent system that:
+- **Understands context** and meaning behind your queries
+- **Searches semantically** across all meeting content
+- **Provides relevant excerpts** with full context
+- **Links related information** from different meetings
+- **Learns from your search patterns** to improve results
+
+<img src="/images/features/smart-search-interface.png" alt="Smart Search Interface" />
+
+## How It Works
+
+### RAG Technology
+
+<CardGroup cols={2}>
+  <Card title="Retrieval" icon="database">
+    **Content Discovery**
+    - Indexes all meeting transcripts, notes, and metadata
+    - Creates semantic embeddings of content
+    - Maintains relationships between related topics
+    - Updates index in real-time as new meetings occur
+  </Card>
+  <Card title="Generation" icon="brain">
+    **Intelligent Responses**
+    - Analyzes retrieved content for relevance
+    - Generates contextual summaries
+    - Provides direct answers to questions
+    - Suggests related information and follow-ups
+  </Card>
+</CardGroup>
+
+### Search Process
+
+<Steps>
+  <Step title="Query Understanding">
+    AI analyzes your search query to understand:
+    - Intent and context
+    - Key entities (people, projects, dates)
+    - Implicit requirements
+    - Scope and time frame
+  </Step>
+  
+  <Step title="Content Retrieval">
+    System searches across:
+    - Meeting transcripts and recordings
+    - Notes and summaries
+    - Action items and tasks
+    - Participant information and roles
+  </Step>
+  
+  <Step title="Result Ranking">
+    Results are ranked by:
+    - Semantic relevance to query
+    - Recency and importance
+    - User access permissions
+    - Historical search patterns
+  </Step>
+  
+  <Step title="Response Generation">
+    AI generates:
+    - Direct answers when possible
+    - Relevant excerpts with context
+    - Related content suggestions
+    - Action-oriented recommendations
+  </Step>
+</Steps>
+
+## Search Interface
+
+### Search Bar
+
+The search bar is your primary interface for finding information:
+
+<Tabs>
+  <Tab title="Basic Search">
+    **Simple Queries**
+    ```
+    "product launch timeline"
+    "Sarah's concerns about budget"
+    "decisions made yesterday"
+    ```
+    
+    **Search Tips:**
+    - Use natural language
+    - Include specific names and dates
+    - Ask questions directly
+    - Use quotes for exact phrases
+  </Tab>
+  
+  <Tab title="Advanced Search">
+    **Filtered Queries**
+    ```
+    speaker:john AND topic:pricing last-month
+    meeting-type:standup decisions:any this-week
+    project:mobile-app unresolved-issues
+    ```
+    
+    **Available Operators:**
+    - `AND`, `OR`, `NOT` for boolean logic
+    - `speaker:name` for specific participants
+    - `meeting-type:type` for meeting categories
+    - `date:range` for time-based filtering
+  </Tab>
+  
+  <Tab title="Natural Language">
+    **Conversational Queries**
+    ```
+    "What did we decide about the Q4 budget?"
+    "Show me all unfinished tasks from last week"
+    "Find meetings where pricing was discussed"
+    "Who was assigned to work on the mobile app?"
+    ```
+    
+    **Query Types:**
+    - Questions seeking specific answers
+    - Commands for information retrieval
+    - Exploratory searches for discovery
+    - Comparative queries across meetings
+  </Tab>
+</Tabs>
+
+### Search Results
+
+<Accordion>
+  <AccordionItem title="Result Types">
+    **Direct Answers**
+    - Concise responses to specific questions
+    - Extracted facts and decisions
+    - Summarized information
+    - Action item details
+    
+    **Content Excerpts**
+    - Relevant transcript segments
+    - Note highlights
+    - Key discussion points
+    - Important quotes and statements
+    
+    **Meeting References**
+    - Links to full meeting records
+    - Contextual meeting information
+    - Participant lists and roles
+    - Related meetings and topics
+  </AccordionItem>
+  
+  <AccordionItem title="Result Presentation">
+    **Visual Indicators**
+    - Relevance scores and rankings
+    - Content type icons (transcript, notes, tasks)
+    - Recency indicators
+    - Source meeting information
+    
+    **Interactive Elements**
+    - Click to expand full context
+    - Jump to specific moments in recordings
+    - View related content suggestions
+    - Export or share results
+  </AccordionItem>
+</Accordion>
+
+## Search Categories
+
+### By Content Type
+
+<CardGroup cols={4}>
+  <Card title="Decisions" icon="gavel">
+    **Decision Tracking**
+    - Final decisions made
+    - Decision rationale
+    - Decision makers
+    - Implementation status
+  </Card>
+  <Card title="Action Items" icon="check-square">
+    **Task Management**
+    - Assigned tasks
+    - Due dates and priorities
+    - Completion status
+    - Task dependencies
+  </Card>
+  <Card title="Discussions" icon="comments">
+    **Conversation Topics**
+    - Key discussion themes
+    - Participant viewpoints
+    - Unresolved issues
+    - Follow-up topics
+  </Card>
+  <Card title="Insights" icon="lightbulb">
+    **Key Takeaways**
+    - Important revelations
+    - Strategic insights
+    - Problem identifications
+    - Opportunity discoveries
+  </Card>
+</CardGroup>
+
+### By Meeting Context
+
+<Tabs>
+  <Tab title="By Participants">
+    **People-Focused Search**
+    ```
+    "John's updates on the marketing campaign"
+    "What did Sarah say about the timeline?"
+    "All decisions made by the leadership team"
+    "Client feedback from external participants"
+    ```
+    
+    **Participant Insights:**
+    - Individual contributions
+    - Speaking patterns
+    - Decision involvement
+    - Expertise areas
+  </Tab>
+  
+  <Tab title="By Projects">
+    **Project-Centric Search**
+    ```
+    "Mobile app development progress"
+    "Website redesign blockers"
+    "Q4 campaign planning discussions"
+    "Product launch preparation status"
+    ```
+    
+    **Project Tracking:**
+    - Project evolution over time
+    - Key milestones and decisions
+    - Resource allocation
+    - Risk and issue identification
+  </Tab>
+  
+  <Tab title="By Time">
+    **Temporal Search**
+    ```
+    "This week's standup decisions"
+    "Last month's client feedback"
+    "Q3 planning session outcomes"
+    "Yesterday's urgent issues"
+    ```
+    
+    **Time-Based Insights:**
+    - Trend analysis
+    - Progress tracking
+    - Seasonal patterns
+    - Evolution of topics
+  </Tab>
+</Tabs>
+
+## Advanced Search Features
+
+### Smart Filters
+
+<Accordion>
+  <AccordionItem title="Dynamic Filters">
+    **Auto-Generated Filters**
+    - Based on search results
+    - Suggested refinements
+    - Popular filter combinations
+    - User-specific preferences
+    
+    **Filter Categories:**
+    - Meeting types and formats
+    - Participant roles and teams
+    - Content types and topics
+    - Time ranges and frequencies
+  </AccordionItem>
+  
+  <AccordionItem title="Saved Searches">
+    **Search Management**
+    - Save frequently used queries
+    - Share searches with team members
+    - Set up search alerts and notifications
+    - Track search result changes over time
+    
+    **Popular Saved Searches:**
+    ```
+    "My assigned action items"
+    "This week's key decisions"
+    "Unresolved client issues"
+    "Product roadmap discussions"
+    ```
+  </AccordionItem>
+</Accordion>
+
+### Search Analytics
+
+<CardGroup cols={3}>
+  <Card title="Search Patterns" icon="chart-line">
+    **Usage Analytics**
+    - Most searched topics
+    - Search frequency trends
+    - Popular query types
+    - User search behavior
+  </Card>
+  <Card title="Content Insights" icon="pie-chart">
+    **Information Discovery**
+    - Most referenced meetings
+    - Trending discussion topics
+    - Emerging themes
+    - Knowledge gaps
+  </Card>
+  <Card title="Team Intelligence" icon="users">
+    **Collaborative Insights**
+    - Team search patterns
+    - Shared knowledge areas
+    - Information silos
+    - Collaboration opportunities
+  </Card>
+</CardGroup>
+
+## Search Optimization
+
+### Query Best Practices
+
+<Warning>
+**Search Tip**: The more specific your query, the better the results. Include names, dates, and specific terms when possible.
+</Warning>
+
+**Effective Query Patterns:**
+
+<Tabs>
+  <Tab title="Specific Information">
+    **Targeted Searches**
+    ```
+    ✅ "John's feedback on the mobile app UI design"
+    ❌ "feedback on design"
+    
+    ✅ "Q4 budget decisions made in October"
+    ❌ "budget stuff"
+    
+    ✅ "Unresolved technical issues from sprint planning"
+    ❌ "issues"
+    ```
+  </Tab>
+  
+  <Tab title="Contextual Queries">
+    **Context-Rich Searches**
+    ```
+    ✅ "What blockers did the dev team identify for the API integration?"
+    ❌ "API blockers"
+    
+    ✅ "Client concerns about the pricing model discussed in sales calls"
+    ❌ "pricing concerns"
+    
+    ✅ "Action items assigned to marketing team for the campaign launch"
+    ❌ "marketing tasks"
+    ```
+  </Tab>
+  
+  <Tab title="Comparative Queries">
+    **Analysis-Focused Searches**
+    ```
+    ✅ "How has the project timeline changed over the past month?"
+    ❌ "timeline changes"
+    
+    ✅ "Compare client feedback from Q3 vs Q4 meetings"
+    ❌ "client feedback comparison"
+    
+    ✅ "Team productivity discussions before and after the new process"
+    ❌ "productivity changes"
+    ```
+  </Tab>
+</Tabs>
+
+### Search Performance
+
+<Steps>
+  <Step title="Index Optimization">
+    **Content Processing**
+    - Automatic content indexing
+    - Semantic embedding generation
+    - Relationship mapping
+    - Real-time updates
+  </Step>
+  
+  <Step title="Query Processing">
+    **Search Efficiency**
+    - Parallel search execution
+    - Cached result optimization
+    - Predictive search suggestions
+    - Auto-complete functionality
+  </Step>
+  
+  <Step title="Result Delivery">
+    **Response Optimization**
+    - Instant result preview
+    - Progressive result loading
+    - Contextual highlighting
+    - Related content suggestions
+  </Step>
+</Steps>
+
+## Integration with Workflow
+
+### Search-Driven Actions
+
+<CardGroup cols={2}>
+  <Card title="Task Creation" icon="plus-circle">
+    **From Search to Action**
+    - Create tasks from search results
+    - Assign action items based on findings
+    - Set up follow-up meetings
+    - Generate reports from searches
+  </Card>
+  <Card title="Knowledge Sharing" icon="share">
+    **Information Distribution**
+    - Share search results with team
+    - Export findings to external tools
+    - Create summaries from searches
+    - Build knowledge base articles
+  </Card>
+</CardGroup>
+
+### API and Automation
+
+<Accordion>
+  <AccordionItem title="Search API">
+    **Programmatic Access**
+    - REST API for search queries
+    - Webhook notifications for new content
+    - Batch search operations
+    - Custom application integration
+    
+    **API Examples:**
+    ```bash
+    # Search for specific content
+    GET /api/search?q="project timeline"&filter=meeting-type:standup
+    
+    # Get saved searches
+    GET /api/searches/saved
+    
+    # Create search alert
+    POST /api/alerts {"query": "urgent issues", "frequency": "daily"}
+    ```
+  </AccordionItem>
+  
+  <AccordionItem title="Workflow Integration">
+    **Automated Processes**
+    - Trigger actions based on search results
+    - Generate reports from search data
+    - Set up monitoring and alerts
+    - Integrate with third-party tools
+    
+    **Integration Examples:**
+    - Slack notifications for new urgent issues
+    - Automatic Jira ticket creation from blockers
+    - Weekly summary emails of key decisions
+    - Dashboard widgets showing search trends
+  </AccordionItem>
+</Accordion>
+
+## Mobile Search
+
+### Mobile-Optimized Interface
+
+<CardGroup cols={2}>
+  <Card title="Voice Search" icon="microphone">
+    **Hands-Free Searching**
+    - Natural language voice queries
+    - Real-time transcription
+    - Context-aware responses
+    - Offline voice processing
+  </Card>
+  <Card title="Quick Actions" icon="bolt">
+    **Mobile Efficiency**
+    - Swipe gestures for common searches
+    - Quick filter applications
+    - One-tap result sharing
+    - Saved search shortcuts
+  </Card>
+</CardGroup>
+
+### Offline Capabilities
+
+- **Cached Results**: Recent searches available offline
+- **Sync on Connect**: Automatic updates when online
+- **Local Storage**: Important content stored locally
+- **Smart Prefetch**: Predictive content downloading
+
+## Privacy and Security
+
+### Data Protection
+
+<Accordion>
+  <AccordionItem title="Search Privacy">
+    **Query Protection**
+    - Encrypted search queries
+    - No query logging without consent
+    - Anonymous search analytics
+    - User-controlled data retention
+  </AccordionItem>
+  
+  <AccordionItem title="Result Security">
+    **Access Control**
+    - Permission-based result filtering
+    - Secure content delivery
+    - Audit trail for sensitive searches
+    - Compliance with data regulations
+  </AccordionItem>
+</Accordion>
+
+---
+
+<Info>
+**Search Intelligence**: Smart Search learns from your patterns and preferences, becoming more accurate and helpful over time. The more you use it, the better it understands your information needs.
+</Info>
+
+**Next Steps:**
+- [RAG Search](/optiverse/advanced/rag-search) - Deep dive into RAG technology
+- [Meeting Analytics](/optiverse/features/meeting-analytics) - Analyze your meeting data
+- [Action Items](/optiverse/features/action-items) - Manage tasks and follow-ups
+
+# Search Across All Your Meetings
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/BJtKYFEhQuo"
+  title="Find Anything Fast: Search Across All Your Meetings with Optiverse"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+
+Discover information instantly across your entire meeting history using Optiverse's advanced RAG-powered search engine that understands context, intent, and relationships. 

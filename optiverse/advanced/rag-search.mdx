@@ -1,0 +1,700 @@
+---
+title: 'RAG-Powered Search'
+description: 'Advanced retrieval-augmented generation for intelligent meeting search'
+icon: 'search'
+---
+
+Leverage the power of Retrieval-Augmented Generation (RAG) to search through your meeting content with unprecedented accuracy and context awareness. Find exactly what you need with natural language queries.
+
+## What is RAG?
+
+RAG (Retrieval-Augmented Generation) is an AI architecture that enhances traditional search by combining:
+
+<CardGroup cols={2}>
+  <Card title="Information Retrieval" icon="database">
+    **Precise Content Finding**
+    - Semantic search across all meeting data
+    - Vector-based similarity matching
+    - Context-aware content retrieval
+    - Real-time index updates
+  </Card>
+  <Card title="Language Generation" icon="robot">
+    **Intelligent Response Creation**
+    - Natural language understanding
+    - Context-aware answer generation
+    - Multi-document synthesis
+    - Conversational search interface
+  </Card>
+</CardGroup>
+
+## How RAG Works in Optiverse
+
+### The RAG Pipeline
+
+<Steps>
+  <Step title="Content Ingestion">
+    **Data Processing**
+    - Meeting transcripts are processed in real-time
+    - Content is segmented into meaningful chunks
+    - Metadata is extracted and indexed
+    - Vector embeddings are generated
+  </Step>
+  
+  <Step title="Query Processing">
+    **Search Understanding**
+    - User query is analyzed for intent
+    - Key entities and concepts are identified
+    - Search parameters are optimized
+    - Semantic similarity is calculated
+  </Step>
+  
+  <Step title="Retrieval">
+    **Content Discovery**
+    - Relevant content chunks are identified
+    - Similarity scores are calculated
+    - Context windows are assembled
+    - Source attribution is maintained
+  </Step>
+  
+  <Step title="Generation">
+    **Response Creation**
+    - Retrieved content is synthesized
+    - Natural language responses are generated
+    - Source citations are included
+    - Follow-up suggestions are provided
+  </Step>
+</Steps>
+
+### Technical Architecture
+
+<Tabs>
+  <Tab title="Vector Database">
+    **Embedding Storage**
+    
+    **Vector Embeddings:**
+    - High-dimensional representations of meeting content
+    - Semantic similarity preservation
+    - Efficient similarity search
+    - Real-time updates and indexing
+    
+    **Index Structure:**
+    ```
+    Meeting Content → Text Chunks → Vector Embeddings → Index
+    
+    Example:
+    "We decided to increase the marketing budget by 20%"
+    ↓
+    [0.123, -0.456, 0.789, ..., 0.321] (768-dimensional vector)
+    ↓
+    Indexed with metadata: {meeting_id, timestamp, speakers, etc.}
+    ```
+  </Tab>
+  
+  <Tab title="Retrieval Engine">
+    **Search Infrastructure**
+    
+    **Similarity Search:**
+    - Cosine similarity calculation
+    - Approximate nearest neighbor search
+    - Multi-vector search capabilities
+    - Hybrid search (semantic + keyword)
+    
+    **Ranking Algorithms:**
+    - Relevance scoring
+    - Recency weighting
+    - Authority scoring
+    - Personalization factors
+  </Tab>
+  
+  <Tab title="Generation Model">
+    **Language Model Integration**
+    
+    **Response Generation:**
+    - Context-aware language generation
+    - Multi-document summarization
+    - Question answering capabilities
+    - Conversation continuity
+    
+    **Quality Assurance:**
+    - Factual accuracy verification
+    - Hallucination detection
+    - Source attribution validation
+    - Response relevance scoring
+  </Tab>
+</Tabs>
+
+## Advanced Search Capabilities
+
+### Semantic Understanding
+
+<Warning>
+**Beyond Keywords**: RAG search understands meaning and context, not just keyword matches. This enables more natural and precise search experiences.
+</Warning>
+
+<Accordion>
+  <AccordionItem title="Concept Mapping">
+    **Intelligent Connections**
+    
+    **Semantic Relationships:**
+    - Understanding synonyms and related terms
+    - Connecting concepts across meetings
+    - Identifying topic evolution over time
+    - Mapping team expertise and interests
+    
+    **Example Queries:**
+    ```
+    Query: "What are the main obstacles to our Q4 goals?"
+    
+    Semantic Understanding:
+    - "obstacles" → "blockers", "challenges", "issues", "problems"
+    - "Q4 goals" → "fourth quarter objectives", "year-end targets"
+    - Context: business planning, performance metrics
+    
+    Results: Finds relevant content even if exact words weren't used
+    ```
+  </AccordionItem>
+  
+  <AccordionItem title="Context Awareness">
+    **Situational Intelligence**
+    
+    **Contextual Factors:**
+    - Meeting type and purpose
+    - Participant roles and relationships
+    - Project timelines and phases
+    - Business context and priorities
+    
+    **Contextual Search Examples:**
+    ```
+    Query: "What did John say about the budget?"
+    
+    Context Considerations:
+    - Which John? (if multiple Johns in organization)
+    - Which budget? (marketing, engineering, overall)
+    - When? (recent discussions vs. historical)
+    - Meeting context (planning vs. review meetings)
+    ```
+  </AccordionItem>
+</Accordion>
+
+### Multi-Modal Search
+
+<CardGroup cols={3}>
+  <Card title="Text Search" icon="text">
+    **Transcript Analysis**
+    - Full-text search across transcripts
+    - Semantic meaning extraction
+    - Context-aware matching
+    - Sentiment analysis integration
+  </Card>
+  <Card title="Speaker Search" icon="user">
+    **Person-Centric Queries**
+    - Individual contribution tracking
+    - Role-based search filtering
+    - Expertise identification
+    - Communication pattern analysis
+  </Card>
+  <Card title="Temporal Search" icon="clock">
+    **Time-Based Discovery**
+    - Chronological event tracking
+    - Trend analysis over time
+    - Meeting series connections
+    - Historical context retrieval
+  </Card>
+</CardGroup>
+
+### Complex Query Handling
+
+<Tabs>
+  <Tab title="Multi-Part Questions">
+    **Compound Queries**
+    
+    **Question Decomposition:**
+    ```
+    Complex Query: "What decisions were made about the mobile app launch timeline, and who was assigned to handle the marketing campaign?"
+    
+    Decomposition:
+    1. Find decisions about mobile app launch timeline
+    2. Find assignments related to marketing campaign
+    3. Connect both topics to provide comprehensive answer
+    
+    Response Structure:
+    - Timeline decisions with context
+    - Marketing assignments with details
+    - Connections between the two topics
+    ```
+  </Tab>
+  
+  <Tab title="Comparative Analysis">
+    **Cross-Meeting Comparisons**
+    
+    **Analytical Queries:**
+    ```
+    Query: "How has our approach to remote work evolved over the past 6 months?"
+    
+    Analysis Process:
+    1. Identify meetings discussing remote work
+    2. Extract key themes and decisions
+    3. Analyze changes over time
+    4. Synthesize evolution narrative
+    
+    Response: Comprehensive timeline showing policy changes, 
+    team feedback, and decision rationale
+    ```
+  </Tab>
+  
+  <Tab title="Hypothetical Scenarios">
+    **What-If Analysis**
+    
+    **Scenario-Based Search:**
+    ```
+    Query: "What would happen if we delayed the product launch by 2 months?"
+    
+    Analysis:
+    1. Find discussions about launch dependencies
+    2. Identify timeline-sensitive decisions
+    3. Extract impact assessments
+    4. Synthesize potential consequences
+    
+    Response: Evidence-based analysis from past discussions
+    about timing, dependencies, and trade-offs
+    ```
+  </Tab>
+</Tabs>
+
+## Performance Optimization
+
+### Search Speed Enhancement
+
+<Steps>
+  <Step title="Index Optimization">
+    **Efficient Storage**
+    - Hierarchical vector indexing
+    - Compressed embedding storage
+    - Parallel processing capabilities
+    - Cache optimization strategies
+  </Step>
+  
+  <Step title="Query Optimization">
+    **Smart Processing**
+    - Query preprocessing and optimization
+    - Intelligent result caching
+    - Predictive prefetching
+    - Load balancing across servers
+  </Step>
+  
+  <Step title="Result Ranking">
+    **Relevance Optimization**
+    - Machine learning-based ranking
+    - User behavior analysis
+    - Personalization algorithms
+    - Continuous improvement loops
+  </Step>
+</Steps>
+
+### Quality Assurance
+
+<Accordion>
+  <AccordionItem title="Accuracy Verification">
+    **Factual Consistency**
+    
+    **Verification Mechanisms:**
+    - Source attribution verification
+    - Cross-reference validation
+    - Confidence scoring
+    - Uncertainty acknowledgment
+    
+    **Quality Metrics:**
+    ```
+    Response Quality Indicators:
+    - Source confidence: 95%
+    - Factual accuracy: 98%
+    - Relevance score: 87%
+    - Completeness: 92%
+    ```
+  </AccordionItem>
+  
+  <AccordionItem title="Hallucination Prevention">
+    **Accuracy Safeguards**
+    
+    **Prevention Strategies:**
+    - Strict source grounding
+    - Confidence thresholding
+    - Explicit uncertainty communication
+    - User feedback integration
+    
+    **Detection Methods:**
+    - Consistency checking across sources
+    - Fact verification algorithms
+    - Anomaly detection systems
+    - Human-in-the-loop validation
+  </AccordionItem>
+</Accordion>
+
+## Advanced Features
+
+### Personalized Search
+
+<CardGroup cols={2}>
+  <Card title="User Preferences" icon="user-cog">
+    **Customized Experience**
+    - Search history analysis
+    - Personal relevance scoring
+    - Preferred information types
+    - Individual workflow patterns
+  </Card>
+  <Card title="Team Context" icon="users">
+    **Collaborative Intelligence**
+    - Team-specific terminology
+    - Project context awareness
+    - Role-based result filtering
+    - Organizational knowledge mapping
+  </Card>
+</CardGroup>
+
+### Continuous Learning
+
+<Tabs>
+  <Tab title="Feedback Integration">
+    **User-Driven Improvement**
+    
+    **Learning Mechanisms:**
+    - Search result ratings
+    - Click-through analysis
+    - Query refinement patterns
+    - User correction feedback
+    
+    **Improvement Cycles:**
+    ```
+    Feedback Collection → Analysis → Model Updates → Testing → Deployment
+    
+    Example:
+    User indicates search result was not relevant
+    ↓
+    Algorithm analyzes query-result mismatch
+    ↓
+    Ranking model is updated
+    ↓
+    Similar queries get better results
+    ```
+  </Tab>
+  
+  <Tab title="Domain Adaptation">
+    **Industry-Specific Optimization**
+    
+    **Adaptation Areas:**
+    - Industry terminology recognition
+    - Domain-specific entity extraction
+    - Specialized workflow understanding
+    - Regulatory compliance awareness
+    
+    **Customization Examples:**
+    ```
+    Healthcare: HIPAA compliance, medical terminology
+    Finance: Regulatory requirements, financial metrics
+    Legal: Case law references, legal terminology
+    Technology: Technical specifications, development processes
+    ```
+  </Tab>
+</Tabs>
+
+### Analytics and Insights
+
+<Steps>
+  <Step title="Search Analytics">
+    **Usage Intelligence**
+    - Query pattern analysis
+    - Popular search topics
+    - User behavior insights
+    - Performance metrics
+  </Step>
+  
+  <Step title="Content Insights">
+    **Knowledge Discovery**
+    - Frequently referenced topics
+    - Knowledge gap identification
+    - Expertise mapping
+    - Content utilization patterns
+  </Step>
+  
+  <Step title="Predictive Analytics">
+    **Future Insights**
+    - Trending topics prediction
+    - Information need forecasting
+    - Proactive content suggestions
+    - Strategic decision support
+  </Step>
+</Steps>
+
+## Integration Capabilities
+
+### API Access
+
+<Accordion>
+  <AccordionItem title="REST API">
+    **Programmatic Access**
+    
+    **Endpoint Examples:**
+    ```bash
+    # Basic search
+    POST /api/v1/search
+    {
+      "query": "What decisions were made about the marketing budget?",
+      "filters": {
+        "date_range": "last_30_days",
+        "meeting_type": "planning"
+      }
+    }
+    
+    # Semantic search
+    POST /api/v1/search/semantic
+    {
+      "query": "project timeline challenges",
+      "context": "development team",
+      "max_results": 10
+    }
+    
+    # Multi-modal search
+    POST /api/v1/search/multimodal
+    {
+      "text_query": "budget discussion",
+      "speaker_filter": ["john_doe", "sarah_smith"],
+      "time_range": "2024-01-01:2024-03-31"
+    }
+    ```
+  </AccordionItem>
+  
+  <AccordionItem title="GraphQL Interface">
+    **Flexible Querying**
+    
+    **Query Examples:**
+    ```graphql
+    query SearchMeetings($query: String!, $filters: SearchFilters) {
+      search(query: $query, filters: $filters) {
+        results {
+          id
+          title
+          relevanceScore
+          excerpt
+          source {
+            meetingId
+            timestamp
+            speakers
+          }
+          context {
+            previousContext
+            followingContext
+          }
+        }
+        facets {
+          speakers
+          topics
+          dates
+          meetingTypes
+        }
+      }
+    }
+    ```
+  </AccordionItem>
+</Accordion>
+
+### Embedding Integration
+
+<CardGroup cols={2}>
+  <Card title="Custom Applications" icon="code">
+    **Developer Integration**
+    - Embed search in custom apps
+    - White-label search interfaces
+    - API-first architecture
+    - Flexible response formats
+  </Card>
+  <Card title="Third-Party Tools" icon="plug">
+    **External Integrations**
+    - Slack search commands
+    - Microsoft Teams integration
+    - Notion database search
+    - Custom dashboard widgets
+  </Card>
+</CardGroup>
+
+## Best Practices
+
+### Query Optimization
+
+<Warning>
+**Search Efficiency**: Well-crafted queries not only return better results but also perform faster and consume fewer resources.
+</Warning>
+
+<Steps>
+  <Step title="Specific Queries">
+    **Precision Over Breadth**
+    ```
+    ❌ Vague: "meetings about stuff"
+    ✅ Specific: "Q4 budget planning decisions in marketing meetings"
+    
+    ❌ Too broad: "what happened yesterday"
+    ✅ Focused: "action items from yesterday's product review meeting"
+    ```
+  </Step>
+  
+  <Step title="Context Inclusion">
+    **Provide Relevant Context**
+    ```
+    ❌ Ambiguous: "What did John say?"
+    ✅ Contextual: "What did John say about the API integration timeline in the engineering standup?"
+    
+    ❌ Unclear: "budget issues"
+    ✅ Specific: "budget concerns raised during Q4 planning for the mobile app project"
+    ```
+  </Step>
+  
+  <Step title="Filter Utilization">
+    **Narrow Search Scope**
+    - Use date ranges for time-sensitive queries
+    - Apply speaker filters for person-specific searches
+    - Utilize meeting type filters for context
+    - Employ project tags for focused results
+  </Step>
+</Steps>
+
+### Advanced Search Techniques
+
+<Tabs>
+  <Tab title="Iterative Refinement">
+    **Progressive Search**
+    
+    **Refinement Process:**
+    1. Start with broad query
+    2. Analyze initial results
+    3. Identify relevant themes
+    4. Refine query with specific terms
+    5. Apply appropriate filters
+    
+    **Example Progression:**
+    ```
+    Query 1: "project delays"
+    → Review results, identify specific projects
+    
+    Query 2: "mobile app project delays in Q3"
+    → Narrow to specific causes
+    
+    Query 3: "mobile app API integration delays September"
+    → Refined, specific results
+    ```
+  </Tab>
+  
+  <Tab title="Comparative Analysis">
+    **Multi-Perspective Search**
+    
+    **Comparison Strategies:**
+    ```
+    Before/After Analysis:
+    "How did our remote work policy change from Q1 to Q4?"
+    
+    Cross-Team Comparison:
+    "Compare engineering vs. marketing perspectives on the product launch timeline"
+    
+    Temporal Trends:
+    "How has client feedback evolved over the past 6 months?"
+    ```
+  </Tab>
+  
+  <Tab title="Hypothesis Testing">
+    **Evidence-Based Search**
+    
+    **Research Approach:**
+    ```
+    Hypothesis: "Team productivity decreased after the new process implementation"
+    
+    Search Strategy:
+    1. Find productivity discussions before implementation
+    2. Search for feedback after implementation
+    3. Identify specific metrics mentioned
+    4. Compare sentiment and outcomes
+    ```
+  </Tab>
+</Tabs>
+
+## Troubleshooting
+
+### Common Issues
+
+<AccordionGroup>
+  <Accordion title="Poor Search Results">
+    **Possible Causes:**
+    - Query too vague or ambiguous
+    - Missing relevant context
+    - Incorrect filters applied
+    - Content not yet indexed
+    
+    **Solutions:**
+    - Use more specific search terms
+    - Include relevant context and names
+    - Review and adjust filters
+    - Wait for recent content indexing
+  </Accordion>
+  
+  <Accordion title="Slow Search Performance">
+    **Possible Causes:**
+    - Complex query processing
+    - Large result set generation
+    - Network connectivity issues
+    - Server load limitations
+    
+    **Solutions:**
+    - Simplify complex queries
+    - Apply filters to reduce scope
+    - Check internet connection
+    - Try searching during off-peak hours
+  </Accordion>
+  
+  <Accordion title="Missing Information">
+    **Possible Causes:**
+    - Content not properly indexed
+    - Privacy/permission restrictions
+    - Meeting processing incomplete
+    - Search scope too narrow
+    
+    **Solutions:**
+    - Verify meeting was processed
+    - Check access permissions
+    - Expand search criteria
+    - Contact support for indexing issues
+  </Accordion>
+</AccordionGroup>
+
+### Performance Optimization
+
+<CardGroup cols={3}>
+  <Card title="Query Optimization" icon="gauge">
+    **Faster Searches**
+    - Use specific keywords
+    - Apply relevant filters
+    - Limit result count
+    - Cache frequent queries
+  </Card>
+  <Card title="Result Refinement" icon="filter">
+    **Better Accuracy**
+    - Provide clear context
+    - Use proper terminology
+    - Include relevant details
+    - Iterate on queries
+  </Card>
+  <Card title="System Efficiency" icon="gear">
+    **Resource Management**
+    - Monitor search patterns
+    - Optimize index structure
+    - Update content regularly
+    - Maintain system health
+  </Card>
+</CardGroup>
+
+---
+
+<Info>
+**RAG Evolution**: RAG technology continuously improves through usage patterns, feedback, and advances in AI research. Your search experience will become more accurate and efficient over time.
+</Info>
+
+**Next Steps:**
+- [Smart Search](/optiverse/features/smart-search) - Master search interface and techniques
+- [AI Insights](/optiverse/advanced/ai-insights) - Explore advanced AI capabilities
+- [Data Export](/optiverse/advanced/data-export) - Export and analyze search results 
